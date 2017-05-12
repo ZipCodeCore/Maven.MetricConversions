@@ -79,6 +79,12 @@ public class ConversionToolSpec {
     }
 
     @Test
+    public void shouldConvertCelsiusToFahrenheitBelowZero() {
+        float fahrenheit = ConversionTool.CelsiusToFahrenheit(-4.33f);
+        assertEquals(24.206, fahrenheit, 0.01);
+    }
+
+    @Test
     public void shouldConvertMphToKph(){
         float kph = ConversionTool.MphToKph(24f);
         assertEquals(38.62, kph, 0.01);
