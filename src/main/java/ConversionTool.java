@@ -43,18 +43,26 @@ public class ConversionTool {
     }
 
     public static float CelsiusToFahrenheit(float celsius){
-        return 1;
+
+        float fahrenheit = (celsius *(9f/5f)) + 32f;
+        return fahrenheit;
     }
 
     public static float FahrenheitToCelsius(float fahrenheit){
-        return 1;
+
+        float celsius = (fahrenheit - 32f) * (5f/9f);
+        return celsius;
     }
 
     public static float MphToKph(float mph){
-        return 1;
+
+        float kph = Math.max(0, mph) * 1.60934f;
+        return kph;
     }
 
     public static float KphToMph(float kph){
-        return 1;
+        float mph = Math.max(0, kph) * 0.621371f;
+        return mph;
+
     }
 }
