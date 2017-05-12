@@ -3,110 +3,114 @@ import org.junit.Test;
 
 public class ConversionToolSpec {
 
+    newTool newTool = new newTool();
+
     @Test
     public void shouldConvertCentimetersToInches() {
-        float inches = ConversionTool.CentimetersToInches(2f);
+
+        float inches = newTool.centimetersToInches(2f);
         assertEquals(0.7874f, inches, 0.001);
     }
     @Test
     public void shouldConvertZeroCentimetersToZeroInches() {
-        float inches = ConversionTool.CentimetersToInches(0);
+        float inches = newTool.centimetersToInches(0);
         assertEquals(0, inches, 0.0);
     }
     @Test
     public void shouldConvertNegativeCentimetersToZeroInches() {
-        float inches = ConversionTool.CentimetersToInches(-5);
+        float inches = newTool.centimetersToInches(-5);
         assertEquals(0, inches, 0.0);
     }
 
     @Test
     public void shouldConvertInchesToCentimeters() {
-        float centimeters = ConversionTool.InchesToCentimeters(4f);
+        float centimeters = newTool.InchesToCentimeters(4f);
         assertEquals(10.16f, centimeters, 0.001);
     }
     @Test
     public void shouldConvertZeroInchesToZeroCentimeters() {
-        float centimeters = ConversionTool.InchesToCentimeters(0);
+        float centimeters = newTool.InchesToCentimeters(0);
         assertEquals(0, centimeters, 0.0);
     }
     @Test
     public void shouldConvertNegativeInchesToZeroCentimeters() {
-        float centimeters = ConversionTool.InchesToCentimeters(-5);
+        float centimeters = newTool.InchesToCentimeters(-5);
         assertEquals(0, centimeters, 0.0);
     }
 
     @Test
     public void shouldConvertFeetToMeters() {
-        float meters = ConversionTool.FeetToMeters(5f);
+        float meters = newTool.FeetToMeters(5f);
         assertEquals(1.524f, meters, 0.001);
     }
     @Test
     public void shouldConvertZeroFeetToZeroMeters() {
-        float meters = ConversionTool.FeetToMeters(0);
+        float meters = newTool.FeetToMeters(0);
         assertEquals(0, meters, 0.0);
     }
     @Test
     public void shouldConvertNegativeFeetToZeroMeters() {
-        float meters = ConversionTool.FeetToMeters(-10);
+        float meters = newTool.FeetToMeters(-10);
         assertEquals(0, meters, 0.0);
     }
 
     @Test
     public void shouldConvertMetersToFeet() {
-        float feet = ConversionTool.MetersToFeet(9f);
+        float feet = newTool.MetersToFeet(9f);
         assertEquals(29.5276f, feet, 0.001);
     }
     @Test
     public void shouldConvertZeroMetersToZeroFeet() {
-        float feet = ConversionTool.MetersToFeet(0);
+        float feet = newTool.MetersToFeet(0);
         assertEquals(0, feet, 0.0);
     }
     @Test
     public void shouldConvertNegativeMetersToZeroFeet() {
-        float feet = ConversionTool.MetersToFeet(-10);
+        float feet = newTool.MetersToFeet(-10);
         assertEquals(0, feet, 0.0);
     }
 
-    @Test
-    public void shouldConvertFahrenheitToCelsius() {
-        float celsius = ConversionTool.FahrenheitToCelsius(80);
-        assertEquals(26.67, celsius, 0.01);
-    }
+        @Test
+        public void shouldConvertFahrenheitToCelsius() {
+            float celsius = newTool.FahrenheitToCelsius(80);
+            assertEquals(26.67, celsius, 0.01);
+        }
+
     @Test
     public void shouldConvertCelsiusToFahrenheit() {
-        float fahrenheit = ConversionTool.CelsiusToFahrenheit(26.67f);
+        float fahrenheit = newTool.CelsiusToFahrenheit(26.67f);
         assertEquals(80, fahrenheit, 0.01);
     }
 
     @Test
     public void shouldConvertMphToKph(){
-        float kph = ConversionTool.MphToKph(24f);
+        float kph = newTool.MphToKph(24f);
         assertEquals(38.62, kph, 0.01);
     }
     @Test
     public void shouldConvertZeroMphToZeroKph(){
-        float kph = ConversionTool.MphToKph(0f);
+        float kph = newTool.MphToKph(0f);
         assertEquals(0, kph, 0.0);
     }
     @Test
     public void shouldConvertNegativeMphToZeroKph(){
-        float kph = ConversionTool.MphToKph(-50f);
+        float kph = newTool.MphToKph(-50f);
         assertEquals(0, kph, 0.0);
     }
 
     @Test
     public void shouldConvertKphToMph(){
-        float mph = ConversionTool.KphToMph(6.44f);
+        float mph = newTool.KphToMph(6.44f);
         assertEquals(4, mph, 0.01);
     }
     @Test
     public void shouldConvertZeroKphToZeroMph(){
-        float mph = ConversionTool.KphToMph(0f);
+        float mph = newTool.KphToMph(0f);
         assertEquals(0, mph, 0.0);
     }
     @Test
     public void shouldConvertNegativeKphToZeroMph(){
-        float mph = ConversionTool.KphToMph(-50f);
+        float mph = newTool.KphToMph(-50f);
         assertEquals(0, mph, 0.0);
     }
 
