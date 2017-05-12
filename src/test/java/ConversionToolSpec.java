@@ -78,6 +78,7 @@ public class ConversionToolSpec {
         assertEquals(80, fahrenheit, 0.01);
     }
 
+
     @Test
     public void shouldConvertMphToKph(){
         float kph = ConversionTool.MphToKph(24f);
