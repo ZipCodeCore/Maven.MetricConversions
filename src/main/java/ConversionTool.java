@@ -41,7 +41,17 @@ public class ConversionTool {
 
     }
 
-    public static float MphToKph(float mph){return 4.3f;}
+    public static float MphToKph(float mph){
+        if(mph < 0){
+            return 0;
+        }
+        return mph*1.609344f;
+    }
 
-    public static float KphToMph(float kph){return 4.3f;}
+    public static float KphToMph(float kph){
+        if(kph < 0){
+            return 0;
+        }
+        return kph/1.609344f;
+    }
 }
