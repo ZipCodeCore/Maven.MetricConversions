@@ -3,7 +3,11 @@ public class ConversionTool {
 
     public static void main(String[] args){}
 
-    public static float CentimetersToInches(float centimeters){}
+    public static float CentimetersToInches(float centimeters){
+
+
+
+    }
 
     public static float InchesToCentimeters(float inches){}
 
