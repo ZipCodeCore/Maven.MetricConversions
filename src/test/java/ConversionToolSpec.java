@@ -8,6 +8,7 @@ public class ConversionToolSpec {
         float inches = ConversionTool.CentimetersToInches(2f);
         assertEquals(0.7874f, inches, 0.001);
     }
+
     @Test
     public void shouldConvertZeroCentimetersToZeroInches() {
         float inches = ConversionTool.CentimetersToInches(0);
@@ -109,5 +110,6 @@ public class ConversionToolSpec {
         float mph = ConversionTool.KphToMph(-50f);
         assertEquals(0, mph, 0.0);
     }
+
 
 }
