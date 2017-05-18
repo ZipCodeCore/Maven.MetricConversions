@@ -3,6 +3,7 @@ import org.junit.Test;
 
 public class ConversionToolSpec {
 
+    // centimeters to inches
     @Test
     public void shouldConvertCentimetersToInches() {
         float inches = ConversionTool.CentimetersToInches(2f);
@@ -19,6 +20,8 @@ public class ConversionToolSpec {
         assertEquals(0, inches, 0.0);
     }
 
+
+    // inches to centimeters
     @Test
     public void shouldConvertInchesToCentimeters() {
         float centimeters = ConversionTool.InchesToCentimeters(4f);
@@ -35,6 +38,8 @@ public class ConversionToolSpec {
         assertEquals(0, centimeters, 0.0);
     }
 
+
+    // feet to meters
     @Test
     public void shouldConvertFeetToMeters() {
         float meters = ConversionTool.FeetToMeters(5f);
@@ -51,6 +56,8 @@ public class ConversionToolSpec {
         assertEquals(0, meters, 0.0);
     }
 
+
+    // meters to feet
     @Test
     public void shouldConvertMetersToFeet() {
         float feet = ConversionTool.MetersToFeet(9f);
@@ -67,17 +74,25 @@ public class ConversionToolSpec {
         assertEquals(0, feet, 0.0);
     }
 
-    @Test
-    public void shouldConvertFahrenheitToCelsius() {
-        float celsius = ConversionTool.FahrenheitToCelsius(80);
-        assertEquals(26.67, celsius, 0.01);
-    }
+
+
+    // celsius to fahrenheit
     @Test
     public void shouldConvertCelsiusToFahrenheit() {
         float fahrenheit = ConversionTool.CelsiusToFahrenheit(26.67f);
         assertEquals(80, fahrenheit, 0.01);
     }
 
+
+    // fahrenheit to celsius
+    @Test
+    public void shouldConvertFahrenheitToCelsius() {
+        float celsius = ConversionTool.FahrenheitToCelsius(80);
+        assertEquals(26.67, celsius, 0.01);
+    }
+
+
+    // mph to kp
     @Test
     public void shouldConvertMphToKph(){
         float kph = ConversionTool.MphToKph(24f);
@@ -94,6 +109,8 @@ public class ConversionToolSpec {
         assertEquals(0, kph, 0.0);
     }
 
+
+    // kph to mph
     @Test
     public void shouldConvertKphToMph(){
         float mph = ConversionTool.KphToMph(6.44f);
@@ -109,5 +126,6 @@ public class ConversionToolSpec {
         float mph = ConversionTool.KphToMph(-50f);
         assertEquals(0, mph, 0.0);
     }
+
 
 }
